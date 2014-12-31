@@ -23,4 +23,8 @@ class Printer
 	def end_round
 		"You ended the round."
 	end
+
+	def take_guess
+		"Ok, what is your guess?"
+	end
 end

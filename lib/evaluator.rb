@@ -11,6 +11,7 @@ class Evaluator
 	def execute(input)
 		if !game_in_progress
 			game_menu(input)
+			[printer.take_guess, :continue]
 		else
 			play_game(input)
 		end
@@ -35,6 +36,7 @@ class Evaluator
 		elsif guess < number
 			[printer.too_low, :continue]
 		elsif guess == number
+			@game_in_progress = false
 			[printer.correct_guess, :continue]
 		end
 	end
